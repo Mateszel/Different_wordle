@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Words tried {% endblock %}</h1>
+    {% for i in range(15) %}
+        <div class='message'>
+	    <h3>{{i+1}} word tried</h3>
+            <h3>Word typed:  {{ messages[i] }}</h3>
+            <h3>Letters in correct place:  {{ info_order[i] }}</h3>
+	    <h3>Words tried:   {{ info_words_tried }}</h3>
+        </div>
+    {% endfor %}
+{% endblock %}

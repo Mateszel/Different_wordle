@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Game of Wordle {% endblock %}</h1>
+    <form method="post">
+        <label for="title">1st try</label>
+        <br>
+        <input type="text" name="letter_1"
+               placeholder="1st letter"
+               value="{{ request.form['letter_1'] }}"></input>
+	<input type="text" name="letter_2"
+               placeholder="2nd letter"
+               value="{{ request.form['letter_2'] }}"></input>
+	<input type="text" name="letter_3"
+               placeholder="3rd letter"
+               value="{{ request.form['letter_3'] }}"></input>
+	<input type="text" name="letter_4"
+               placeholder="4th letter"
+               value="{{ request.form['letter_4'] }}"></input>
+	<input type="text" name="letter_5"
+               placeholder="5th letter"
+               value="{{ request.form['letter_5'] }}"></input>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
